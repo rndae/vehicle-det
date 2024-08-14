@@ -1,4 +1,3 @@
-# video_processing.pyx
 from collections import defaultdict
 import numpy as np
 import pandas as pd
@@ -8,7 +7,7 @@ cimport cython
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-def processVideoTrackYoloCSV(str videoName, str videoFolder, str outputFolder='', int save_interval=100):
+def processVideoTrackYoloCSV(str videoName, str videoFolder, str outputFolder='', int save_interval=60):
     cdef str outputCSVFile = outputFolder + videoName + '-output.csv'
     cdef str cacheCSVFile = outputFolder + videoName + '-cached-output.csv'
 
